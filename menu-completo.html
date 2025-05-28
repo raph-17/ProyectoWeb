@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menú Completo - La Ruta del Sabor</title>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      
+  function scrollLeft(id) {
+    const contenedor = document.getElementById(id);
+    if (contenedor) contenedor.scrollBy({ left: -300, behavior: 'smooth' });
+  }
+
+  function scrollRight(id) {
+    const contenedor = document.getElementById(id);
+    if (contenedor) contenedor.scrollBy({ left: 300, behavior: 'smooth' });
+  }
+    </script>
+
+</head>
+<body>
+
+    <!-- Header (respeta el original) -->
+     <header>
+        <div class="nav-container">
+            <div class="Logo">
+                <img src="Icon/logo.png" alt="Logo" class="responsive-img">
+            </div>
+            <nav class="menu">
+                <a href="PWeb.html">
+                    <p>Inicio</p>
+                </a>
+                <a href="menu-completo.html">
+                    <p>Menú</p>
+                </a>
+                <a href="PWeb.html#nosotros">
+                    <p>Nosotros</p>
+                </a>
+                <a href="PWeb.html#contacto">
+                    <p>Contactos</p>
+                </a>
+            </nav>
+            <div class="registro">
+                <a href="login.html">Inicie sesión</a>
+            </div>
+             <div class="carrito">
+                <a href="carrito.html">Carrito</a>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección de menú completo -->
+    <main class="menu-section" style="padding: 2rem;">
+        <h2>Menú Completo</h2>
+        <p>¡Disfruta de toda nuestra variedad, sacia tus antojos en un solo lugar!</p>
+       <div class="galeria-menu" style="display: block; padding: 1rem 0;">
+
+  <!-- 🍔 Hamburguesas -->
+  <div class="categoria" id="categoria-hamburguesas">
+     <h3><span aria-hidden="true">🍔</span> <span>Hamburguesas</span></h3>
+    <div class="galeria-horizontal" id="galeria-hamburguesas">
+     <div class="galeria-item" data-nombre="Hamburguesa Clásica" data-precio="12.50" data-img="Icon/Hamburguesas/hamburguesa1.jpg" data-desc="Pan artesanal, carne 100% res, lechuga, tomate y salsas.">
+        <img src="Icon/Hamburguesas/hamburguesa1.jpg" alt="Hamburguesa Criolla" class="responsive-img">
+        <div class="etiqueta">Hamburguesa Clásica - S/ 12.50</div>
+      </div>
+
+      <div class="galeria-item" data-nombre="Hamburguesa Criolla" data-precio="11.90" data-img="Icon/Hamburguesas/hamburguesa2.jpg" data-desc="Carne de res, plátano frito, huevo y salsa criolla.">
+        <img src="Icon/Hamburguesas/hamburguesa2.jpg" alt="Hamburguesa Clásica" class="responsive-img">
+        <div class="etiqueta">Hamburguesa Criolla - S/ 11.90</div>
+      </div>
+      <div class="galeria-item" data-nombre="Hamburguesa con Queso" data-precio="13.00" data-img="Icon/Hamburguesas/hamburguesa3.jpg" data-desc="Carne jugosa, queso derretido, lechuga y tomate.">
+        <img src="Icon/Hamburguesas/hamburguesa3.jpg" alt="Hamburguesa con Queso" class="responsive-img">
+        <div class="etiqueta">Con Queso - S/ 13.00</div>
+      </div>
+      <div class="galeria-item" data-nombre="Hamburguesa Doble Carne" data-precio="15.00" data-img="Icon/Hamburguesas/hamburguesa4.jpg" data-desc="Doble porción de carne, queso, lechuga y tomate.">
+        <img src="Icon/Hamburguesas/hamburguesa4.jpg" alt="Hamburguesa Doble" class="responsive-img">
+        <div class="etiqueta">Doble Carne - S/ 15.00</div>
+      </div>
+      <div class="galeria-item" data-nombre="Hamburguesa con Huevo" data-precio="13.50" data-img="Icon/Hamburguesas/hamburguesa5.jpg" data-desc="Carne, huevo frito, lechuga y salsa especial.">
+        <img src="Icon/Hamburguesas/hamburguesa5.jpg" alt="Hamburguesa con Huevo" class="responsive-img">
+        <div class="etiqueta">Con Huevo - S/ 13.50</div>
+      </div>
+      <div class="galeria-item" data-nombre="Hamburguesa con Tocino" data-precio="14.00" data-img="Icon/Hamburguesas/hamburguesa6.jpg" data-desc="Carne, tocino crujiente, lechuga y tomate.">
+        <img src="Icon/Hamburguesas/hamburguesa6.jpg" alt="Hamburguesa Tocino" class="responsive-img">
+        <div class="etiqueta">Con Tocino - S/ 14.00</div>
+      </div>
+      <div class="galeria-item" data-nombre="Hamburguesa Especial" data-precio="16.00" data-img="Icon/Hamburguesas/hamburguesa7.jpg" data-desc="Carne, queso azul, cebolla caramelizada y salsa BBQ.">
+        <img src="Icon/Hamburguesas/hamburguesa7.jpg" alt="Hamburguesa Especial" class="responsive-img">
+        <div class="etiqueta">Especial Ruta - S/ 16.00</div>
+      </div>
+    </div>
+  </div>
+
+    <!-- 🍗 Alitas -->
+  <div class="categoria" id="categoria-alitas">
+    <h3><span aria-hidden="true">🍗</span> <span>Alitas</span></h3>
+    <div class="galeria-horizontal">
+      <div class="galeria-item" data-nombre="Alitas BBQ" data-precio="11.00" data-img="Icon/Alitas/alitas1.jpg" data-desc="Alitas de pollo bañadas en salsa BBQ.">
+        <img src="Icon/Alitas/alitas1.jpg" alt="Alitas BBQ" class="responsive-img">
+        <div class="etiqueta">BBQ - S/ 11.00</div>
+      </div>
+       <div class="galeria-item" data-nombre="Alitas Buffalo" data-precio="11.50" data-img="Icon/Alitas/alitas2.jpg" data-desc="Alitas de pollo con salsa picante estilo Buffalo.">
+        <img src="Icon/Alitas/alitas2.jpg" alt="Alitas Buffalo" class="responsive-img">
+        <div class="etiqueta">Alitas Buffalo - S/ 11.50</div>
+      </div>
+       <div class="galeria-item" data-nombre="Alitas Picantes" data-precio="12.00" data-img="Icon/Alitas/alitas3.jpg" data-desc="Alitas de pollo con salsa picante especial.">
+        <img src="Icon/Alitas/alitas3.jpg" alt="Alitas Picantes" class="responsive-img">
+        <div class="etiqueta">Alitas Picantes - S/ 12.00</div>
+      </div>
+       <div class="galeria-item" data-nombre="Alitas con Miel" data-precio="11.80" data-img="Icon/Alitas/alitas4.jpg" data-desc="Alitas de pollo con salsa de miel y mostaza.">
+        <img src="Icon/Alitas/alitas4.jpg" alt="Alitas con Miel" class="responsive-img">
+        <div class="etiqueta">Alitas con Miel - S/ 11.80</div>
+      </div>
+       <div class="galeria-item" data-nombre="Alitas a la Parrilla" data-precio="12.50" data-img="Icon/Alitas/alitas5.jpg" data-desc="Alitas de pollo asadas a la parrilla con especias.">
+        <img src="Icon/Alitas/alitas5.jpg" alt="Alitas a la Parrilla" class="responsive-img">
+        <div class="etiqueta">Alitas a la Parrilla - S/ 12.50</div>
+      </div>
+       <div class="galeria-item" data-nombre="Alitas Oriental" data-precio="13.00" data-img="Icon/Alitas/alitas6.jpg" data-desc="Alitas de pollo con salsa oriental agridulce.">
+        <img src="Icon/Alitas/alitas6.jpg" alt="Alitas Oriental" class="responsive-img">
+        <div class="etiqueta">Alitas Oriental - S/ 13.00</div>
+      </div>
+       <div class="galeria-item" data-nombre="Alitas Fritas Crocantes" data-precio="11.20" data-img="Icon/Alitas/alitas7.jpg" data-desc="Alitas de pollo fritas, crujientes y doradas.">
+        <img src="Icon/Alitas/alitas7.jpg" alt="Alitas Fritas Crocantes" class="responsive-img">
+        <div class="etiqueta">Alitas Fritas Crocantes - S/ 11.20</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🐔 Pollo -->
+  <div class="categoria" id="categoria-pollo">
+    <h3><span aria-hidden="true">🐔</span> <span>Pollo</span></h3>
+    <div class="galeria-horizontal">
+      <div class="galeria-item" data-nombre="Pollo Broaster" data-precio="10.50" data-img="Icon/Pollo/pollo1.jpg" data-desc="Pollo frito estilo broaster, crujiente por fuera y jugoso por dentro.">
+        <img src="Icon/Pollo/pollo1.jpg" alt="Pollo Broaster" class="responsive-img">
+        <div class="etiqueta">Broaster - S/ 10.50</div>
+      </div>
+      <div class="galeria-item" data-nombre="Salchipollo" data-precio="10.50" data-img="Icon/Pollo/pollo2.jpg" data-desc="Pollo frito con salchicha, acompañado de papas fritas.">
+        <img src="Icon/Pollo/pollo2.jpg" alt="Salchipollo" class="responsive-img">
+        <div class="etiqueta">Salchipollo - S/ 10.50</div>
+      </div>
+      <div class="galeria-item" data-nombre="Filete a la Plancha" data-precio="9.50" data-img="Icon/Pollo/pollo3.jpg" data-desc="Filete de pollo a la plancha, sazonado al gusto.">
+        <img src="Icon/Pollo/pollo3.jpg" alt="Filete a la Plancha" class="responsive-img">
+        <div class="etiqueta"> Filete a la Plancha - S/ 9.50</div>
+      </div>
+      <div class="galeria-item" data-nombre="Filete Apanado" data-precio="9.90" data-img="Icon/Pollo/pollo4.jpg" data-desc="Filete de pollo empanizado y frito, crujiente por fuera.">
+        <img src="Icon/Pollo/pollo4.jpg" alt="Filete Apanado" class="responsive-img">
+        <div class="etiqueta">Filete Apanado - S/ 9.90</div>
+      </div>
+      <div class="galeria-item" data-nombre="Dedidos Crispy" data-precio="11.00" data-img="Icon/Pollo/pollo5.jpg" data-desc="Dedos de pollo empanizados y fritos, perfectos para compartir.">
+        <img src="Icon/Pollo/pollo5.jpg" alt="Deditos Crispy" class="responsive-img">
+        <div class="etiqueta">Dedidos crispy - S/ 11.00</div>
+      </div>
+      <div class="galeria-item" data-nombre="Nuggets" data-precio="8.50" data-img="Icon/Pollo/pollo6.jpg" data-desc="Nuggets de pollo empanizados, crujientes y jugosos.">
+        <img src="Icon/Pollo/pollo6.jpg" alt="Nuggets" class="responsive-img">
+        <div class="etiqueta">Nuggets (6 unidades) - S/ 8.50</div>
+      </div>
+      <div class="galeria-item" data-nombre="Muslitos BBQ" data-precio="10.00" data-img="Icon/Pollo/pollo7.jpg" data-desc="Muslitos de pollo marinados y asados con salsa BBQ.">
+        <img src="Icon/Pollo/pollo7.jpg" alt="Muslitos BBQ" class="responsive-img">
+        <div class="etiqueta">Muslitos BBQ - S/ 10.00</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🍟 Papas -->
+  <div class="categoria" id="categoria-papas">
+    <h3><span aria-hidden="true">🍟</span> <span>Papas</span></h3>
+    <div class="galeria-horizontal">
+      <div class="galeria-item" data-nombre="Papas Clásicas" data-precio="6.00" data-img="Icon/Papas/papas1.jpg" data-desc="Papas fritas clásicas, crujientes y doradas.">
+        <img src="Icon/Papas/papas1.jpg" alt="Papas Clásicas" class="responsive-img">
+        <div class="etiqueta">Clásicas - S/ 6.00</div>
+      </div>
+      <div class="galeria-item" data-nombre="Papas Rústicas" data-precio="6.50" data-img="Icon/Papas/papas2.jpg" data-desc="Papas fritas con piel, sazonadas al gusto.">
+        <img src="Icon/Papas/papas2.jpg" alt="Papas Rústicas" class="responsive-img">
+        <div class="etiqueta">Papas Rústicas - S/ 6.50</div>
+      </div>
+      <div class="galeria-item" data-nombre="Papas con Queso" data-precio="7.50" data-img="Icon/Papas/papas3.jpg" data-desc="Papas fritas con queso derretido y salsas.">
+        <img src="Icon/Papas/papas3.jpg" alt="Papas con Queso" class="responsive-img">
+        <div class="etiqueta">Papas con Queso - S/ 7.50</div>
+      </div>
+      <div class="galeria-item" data-nombre="Papas con Tocino" data-precio="8.00" data-img="Icon/Papas/papas4.jpg" data-desc="Papas fritas con trozos de tocino y salsas.">
+        <img src="Icon/Papas/papas4.jpg" alt="Papas con Tocino" class="responsive-img">
+        <div class="etiqueta">Papas con Tocino - S/ 8.00</div>
+      </div>
+      <div class="galeria-item" data-nombre="Papas con Queso y Tocino" data-precio="8.50" data-img="Icon/Papas/papas5.jpg" data-desc="Papas fritas con queso derretido y trozos de tocino.">
+        <img src="Icon/Papas/papas5.jpg" alt="Papas Bravas" class="responsive-img">
+        <div class="etiqueta">Papas Bravas - S/ 7.00</div>
+      </div>
+      <div class="galeria-item" data-nombre="Salchipapa" data-precio="9.50" data-img="Icon/Papas/papas6.jpg" data-desc="Papas fritas con salchicha y salsas al gusto.">
+        <img src="Icon/Papas/papas6.jpg" alt="Salchipapa" class="responsive-img">
+        <div class="etiqueta">Salchipapa - S/ 9.50</div>
+      </div>
+      <div class="galeria-item" data-nombre="Papas Trufadas" data-precio="9.00" data-img="Icon/Papas/papas7.jpg" data-desc="Papas fritas con aceite de trufa y queso parmesano.">
+        <img src="Icon/Papas/papas7.jpg" alt="Papas Clásicas" class="responsive-img">
+        <div class="etiqueta">Papas Trufadas - S/ 9.00</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🥗 Light -->
+  <div class="categoria" id="categoria-light">
+    <h3><span aria-hidden="true">🥗</span> <span>Light</span></h3>
+    <div class="galeria-horizontal">
+      <div class="galeria-item" data-nombre="Ensalada César" data-precio="9.50" data-img="Icon/Light/ensalada1.jpg" data-desc="Ensalada César con pollo, lechuga, crutones y aderezo César.">
+        <img src="Icon/Light/ensalada1.jpg" alt="Ensalada César" class="responsive-img">
+        <div class="etiqueta">Ensalada César - S/ 9.50</div>
+      </div>
+      <div class="galeria-item" data-nombre="Ensalada Mixta" data-precio="8.50" data-img="Icon/Light/ensalada2.jpg" data-desc="Ensalada fresca con lechuga, tomate, pepino y aderezo.">
+        <img src="Icon/Light/ensalada2.jpg" alt="Ensalada Mixta" class="responsive-img">
+        <div class="etiqueta">Ensalada Mixta - S/ 8.50</div>
+      </div>
+      <div class="galeria-item" data-nombre="Wrap de Pollo Light" data-precio="10.00" data-img="Icon/Light/ensalada3.jpg" data-desc="Wrap de pollo con vegetales frescos envuelto en tortilla integral.">
+        <img src="Icon/Light/ensalada3.jpg" alt="Wrap de Pollo Light" class="responsive-img">
+        <div class="etiqueta">Wrap de Pollo Light - S/ 10.00</div>
+      </div>
+      <div class="galeria-item" data-nombre="Croquetas de Atún" data-precio="9.80" data-img="Icon/Light/ensalada4.jpg" data-desc="Deliciosas croquetas de atún con ensalada fresca.">
+        <img src="Icon/Light/ensalada4.jpg" alt="Croquetas de atún" class="responsive-img">
+        <div class="etiqueta">Croquetas de Atún - S/ 9.80</div>
+      </div>
+      <div class="galeria-item" data-nombre="Yogurt con Granola" data-precio="6.50" data-img="Icon/Light/ensalada5.jpg" data-desc="Yogurt natural con granola y frutas frescas.">
+        <img src="Icon/Light/ensalada5.jpg" alt="Yogurt con Granola" class="responsive-img">
+        <div class="etiqueta">Yogurt con Granola - S/ 6.50</div>
+      </div>
+      <div class="galeria-item" data-nombre="Fruta Mixta" data-precio="7.00" data-img="Icon/Light/ensalada6.jpg" data-desc="Ensalada de frutas frescas de temporada.">
+        <img src="Icon/Light/ensalada6.jpg" alt="Fruta Mixta" class="responsive-img">
+        <div class="etiqueta">Fruta Mixta - S/ 7.00</div>
+      </div>
+      <div class="galeria-item" data-nombre="Sándwich Integral" data-precio="8.00" data-img="Icon/Light/ensalada7.jpg" data-desc="Sándwich integral con pollo, lechuga y tomate.">
+        <img src="Icon/Light/ensalada7.jpg" alt="Sándwich Integral" class="responsive-img">
+        <div class="etiqueta">Sándwich Integral - S/ 8.00</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🧁 Postres -->
+  <div class="categoria" id="categoria-postres">
+    <h3><span aria-hidden="true">🧁</span> <span>Postres</span></h3>
+    <div class="galeria-horizontal">
+      <div class="galeria-item" data-nombre="Tarta de Chocolate" data-precio="5.00" data-img="Icon/Postres/postre1.jpg" data-desc="Deliciosa tarta de chocolate con crema.">
+        <img src="Icon/Donas/dona1.jpg" alt="Dona Glaseada" class="responsive-img">
+        <div class="etiqueta">Glaseada - S/ 4.00</div>
+      </div>
+      <div class="galeria-item" data-nombre="Dona de Chocolate" data-precio="4.20" data-img="Icon/Donas/dona2.jpg" data-desc="Dona suave con cobertura de chocolate.">
+        <img src="Icon/Donas/dona2.jpg" alt="Dona de Chocolate" class="responsive-img">
+        <div class="etiqueta">Chocolate - S/ 4.20</div>
+      </div>
+      <div class="galeria-item" data-nombre="Dona rellena de Manjar" data-precio="4.50" data-img="Icon/Donas/dona3.jpg" data-desc="Dona suave rellena de manjar blanco.">
+        <img src="Icon/Donas/dona3.jpg" alt="Dona rellena de Manjar" class="responsive-img">
+        <div class="etiqueta">Rellena de Manjar - S/ 4.50</div>
+      </div>
+      <div class="galeria-item" data-nombre="Doble Chocolate" data-precio="4.80" data-img="Icon/Donas/dona4.jpg" data-desc="Dona con doble cobertura de chocolate.">
+        <img src="Icon/Donas/dona4.jpg" alt="Doble Chocolate" class="responsive-img">
+        <div class="etiqueta">Doble Chocolate - S/ 4.80</div>
+      </div>
+      <div class="galeria-item">
+        <img src="Icon/Donas/dona5.jpg" alt="Dona Glaseada" class="responsive-img">
+        <div class="etiqueta">Dona de Fresa - S/ 4.30</div>
+      </div>
+      <div class="galeria-item" data-nombre="Dona Arcoíris" data-precio="4.70" data-img="Icon/Donas/dona6.jpg" data-desc="Dona colorida con glaseado de varios sabores.">
+        <img src="Icon/Donas/dona6.jpg" alt="Dona Arcoíris" class="responsive-img">
+        <div class="etiqueta">Dona Arcoíris - S/ 4.70</div>
+      </div>
+      <div class="galeria-item" data-nombre="Mini Donas" data-precio="6.00" data-img="Icon/Donas/dona7.jpg" data-desc="Mini donas variadas, perfectas para compartir.">
+        <img src="Icon/Donas/dona7.jpg" alt="Mini Donas" class="responsive-img">
+        <div class="etiqueta">Mini Donas (pack 6) - S/ 6.00</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🥤 Refrescos -->
+  <div class="categoria" id="categoria-refrescos">
+    <h3><span aria-hidden="true">🥤</span> <span>Refrescos</span></h3>
+    <div class="galeria-horizontal">
+      <div class="galeria-item" data-nombre="Refresco de Maracuyá" data-precio="3.50" data-img="Icon/Refrescos/refresco1.jpg" data-desc="Refresco natural de maracuyá, refrescante y delicioso.">
+        <img src="Icon/Refrescos/refresco1.jpg" alt="Refresco de Maracuyá" class="responsive-img">
+        <div class="etiqueta">Maracuyá - S/ 3.50</div>
+      </div>
+      <div class="galeria-item" data-nombre="Chicha Morada" data-precio="3.50" data-img="Icon/Refrescos/refresco2.jpg" data-desc="Chicha morada refrescante, hecha con maíz morado.">
+        <img src="Icon/Refrescos/refresco2.jpg" alt="Chicha Morada" class="responsive-img">
+        <div class="etiqueta">Chicha Morada - S/ 3.50</div>
+      </div>
+      <div class="galeria-item" data-nombre="Limonada" data-precio="3.80" data-img="Icon/Refrescos/refresco3.jpg" data-desc="Limonada fresca, ideal para el calor.">
+        <img src="Icon/Refrescos/refresco3.jpg" alt="Limonada" class="responsive-img">
+        <div class="etiqueta">Limonada - S/ 3.80</div>
+      </div>
+      <div class="galeria-item" data-nombre="Agua Mineral" data-precio="2.00" data-img="Icon/Refrescos/refresco4.jpg" data-desc="Agua mineral natural, refrescante y saludable.">
+        <img src="Icon/Refrescos/refresco4.jpg" alt="Agua Mineral" class="responsive-img">
+        <div class="etiqueta">Agua Mineral - S/ 2.00</div>
+      </div>
+      <div class="galeria-item" data-nombre="Gaseosa Personal" data-precio="3.00" data-img="Icon/Refrescos/refresco5.jpg" data-desc="Gaseosa en lata, ideal para acompañar tus comidas.">
+        <img src="Icon/Refrescos/refresco5.jpg" alt="Gaseosa Personal" class="responsive-img">
+        <div class="etiqueta">Gaseosa Personal - S/ 3.00</div>
+      </div>
+      <div class="galeria-item" data-nombre="Té Helado" data-precio="3.50" data-img="Icon/Refrescos/refresco6.jpg" data-desc="Té helado refrescante, ideal para el calor.">
+        <img src="Icon/Refrescos/refresco6.jpg" alt="Té Helado" class="responsive-img">
+        <div class="etiqueta">Té Helado - S/ 3.50</div>
+      </div>
+      <div class="galeria-item" data-nombre="Refresco de Mango" data-precio="4.00" data-img="Icon/Refrescos/refresco7.jpg" data-desc="Refresco natural de mango, refrescante y delicioso.">
+        <img src="Icon/Refrescos/refresco7.jpg" alt="Refresco de Mango" class="responsive-img">
+        <div class="etiqueta">Refresco de Mango - S/ 4.00</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🧂 Cremas -->
+  <div class="categoria" id="categoria-cremas">
+    <h3><span aria-hidden="true">🧂</span> <span>Cremas y Salsas</span></h3>
+    <div class="galeria-horizontal">
+      <div class="galeria-item" data-nombre="Mayonesa" data-precio="0" data-img="Icon/Cremas/crema1.jpg" data-desc="Mayonesa casera, ideal para acompañar.">
+        <img src="Icon/Cremas/crema1.jpg" alt="Mayonesa" class="responsive-img">
+        <div class="etiqueta">Mayonesa - Gratis</div>
+      </div>
+      <div class="galeria-item" data-nombre="Kétchup" data-precio="0" data-img="Icon/Cremas/crema2.jpg" data-desc="Kétchup clásico, ideal para acompañar.">
+        <img src="Icon/Cremas/crema2.jpg" alt="Kétchup" class="responsive-img">
+        <div class="etiqueta">Kétchup - Gratis</div>
+      </div>
+      <div class="galeria-item" data-nombre="Mostaza" data-precio="0" data-img="Icon/Cremas/crema3.jpg" data-desc="Mostaza clásica, ideal para acompañar.">
+        <img src="Icon/Cremas/crema3.jpg" alt="Mostaza" class="responsive-img">
+        <div class="etiqueta">Mostaza - Gratis</div>
+      </div>
+      <div class="galeria-item" data-nombre="Ají Pollero" data-precio="0" data-img="Icon/Cremas/crema4.jpg" data-desc="Ají pollero casero, ideal para acompañar.">
+        <img src="Icon/Cremas/crema4.jpg" alt="Ají pollero" class="responsive-img">
+        <div class="etiqueta">Ají pollero - Gratis</div>
+      </div>
+      <div class="galeria-item" data-nombre="Salsa de Queso" data-precio="0.50" data-img="Icon/Cremas/crema5.jpg" data-desc="Salsa de queso cheddar cremosa.">
+        <img src="Icon/Cremas/crema5.jpg" alt="Salsa BBQ" class="responsive-img">
+        <div class="etiqueta">Salsa BBQ - S/ 0.50</div>
+      </div>
+      <div class="galeria-item" data-nombre="Tártara" data-precio="0.50" data-img="Icon/Cremas/crema6.jpg" data-desc="Salsa tártara con pepinillos y alcaparras.">
+        <img src="Icon/Cremas/crema6.jpg" alt="Tártara" class="responsive-img">
+        <div class="etiqueta">Tártara - S/ 0.50</div>
+      </div>
+      <div class="galeria-item" data-nombre="Crema Huancaína" data-precio="0.50" data-img="Icon/Cremas/crema7.jpg" data-desc="Crema de ají amarillo con queso fresco.">
+        <img src="Icon/Cremas/crema7.jpg" alt="Crema Huancaína" class="responsive-img">
+        <div class="etiqueta">Crema Huancaína - S/ 0.50</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 📦 Combos -->
+  <div class="categoria" id="categoria-combos">
+    <h3><span aria-hidden="true">📦</span> <span>Combos</span></h3>}
+    <div class="galeria-horizontal"  >
+      <div class="galeria-item" data-nombre="Combo Clásico" data-precio="18.00" data-img="Icon/Combos/combo1.jpg" data-desc="Hamburguesa clásica, papas fritas y bebida.">
+        <img src="Icon/Combos/combo1.jpg" alt="Combo Clásico" class="responsive-img">
+        <div class="etiqueta">Combo Clásico (Hamb + Papas + Bebida) - S/ 18.00</div>
+      </div>
+      <div class="galeria-item" data-nombre="Combo 2 Hamburguesas" data-precio="30.00" data-img="Icon/Combos/combo2.jpg" data-desc="2 hamburguesas, 2 papas fritas y 2 bebidas.">
+        <img src="Icon/Combos/combo2.jpg" alt="Combo 2 Hamburguesas" class="responsive-img">
+        <div class="etiqueta">Combo 2 Hamburguesas + 2 Bebidas - S/ 30.00</div>
+      </div>
+      <div class="galeria-item" data-nombre="Combo Alitas" data-precio="16.00" data-img="Icon/Combos/combo3.jpg" data-desc="Alitas BBQ, papas fritas y bebida.">
+        <img src="Icon/Combos/combo3.jpg" alt="Combo Alitas" class="responsive-img">
+        <div class="etiqueta">Combo Alitas + Papas - S/ 16.00</div>
+      </div>
+      <div class="galeria-item" data-nombre="Combo Broaster Clásico" data-precio="24.00" data-img="Icon/Combos/combo4.jpg" data-desc="Pollo broaster, arroz y ensalada.">
+        <img src="Icon/Combos/combo4.jpg" alt="Combo Broaster Clásico" class="responsive-img">
+        <div class="etiqueta">Combo pollo broaster ligth S/ 16.00</div>
+      </div>
+      <div class="galeria-item" data-nombre="Combo Infantil" data-precio="15.00" data-img="Icon/Combos/combo5.jpg" data-desc="Hamburguesa pequeña, papas fritas y bebida infantil.">
+        <img src="Icon/Combos/combo5.jpg" alt="Combo Infantil" class="responsive-img">
+        <div class="etiqueta">Combo Infantil - S/ 15.00</div>
+      </div>
+      <div class="galeria-item" data-nombre="Combo Hamburguesa BBQ" data-precio="20.00" data-img="Icon/Combos/combo6.jpg" data-desc="Hamburguesa BBQ, papas fritas y bebida.">
+        <img src="Icon/Combos/combo6.jpg" alt="Combo Hamburguesa BBQ " class="responsive-img">
+        <div class="etiqueta">Combo Hamburguesa BBQ - S/ 20.00</div>
+      </div>
+      <div class="galeria-item" data-nombre="Combo Vegano Light" data-precio="15.00" data-img="Icon/Combos/combo7.jpg" data-desc="Hamburguesa vegana, papas rústicas y bebida vegana.">
+        <img src="Icon/Combos/combo7.jpg" alt="Combo Vegano Light" class="responsive-img">
+        <div class="etiqueta">Combo Vegano Light - S/ 15.00</div>
+      </div>
+    </div>
+  </div>
+<div class="modal" id="modalProducto">
+    <div class="modal-content">
+      <img id="modalImg" src="" alt="">
+      <h4 id="modalNombre"></h4>
+      <p id="modalDesc"></p>
+      <p><strong>Precio: S/ <span id="modalPrecio"></span></strong></p>
+      <div class="modal-buttons">
+        <button class="btn-agregar" onclick="window.location.href='carrito.html'">Agregar</button>
+        <button class="btn-salir" onclick="cerrarModal()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const items = document.querySelectorAll('.galeria-item');
+      const modal = document.getElementById('modalProducto');
+      const modalImg = document.getElementById('modalImg');
+      const modalNombre = document.getElementById('modalNombre');
+      const modalDesc = document.getElementById('modalDesc');
+      const modalPrecio = document.getElementById('modalPrecio');
+
+      items.forEach(item => {
+        item.addEventListener('click', () => {
+          modalImg.src = item.getAttribute('data-img');
+          modalNombre.textContent = item.getAttribute('data-nombre');
+          modalDesc.textContent = item.getAttribute('data-desc');
+          modalPrecio.textContent = item.getAttribute('data-precio');
+          modal.style.display = 'flex';
+        });
+      });
+
+      document.querySelector('.btn-salir').addEventListener('click', () => {
+        modal.style.display = 'none';
+      });
+
+      window.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+    });
+  </script>
+    </main>
+     <footer>
+        <p>&copy; 2025 Restaurant La Ruta del Sabor. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

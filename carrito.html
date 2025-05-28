@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito de comprar</title>
+
+<link rel="stylesheet" href="style.css" />
+ 
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="Logo">
+                <img src="Icon/logo.png" alt="Logo" class="responsive-img">
+            </div>
+            <nav class="menu">
+                <a href="PWeb.html">
+                    <p>Inicio</p>
+                </a>
+                <a href="menu-completo.html">
+                    <p>Menú</p>
+                </a>
+                <a href="PWeb.html#nosotros">
+                    <p>Nosotros</p>
+                </a>
+                <a href="PWeb.html#contacto">
+                    <p>Contactos</p>
+                </a>
+            </nav>
+          <div class="registro">
+                <a href="login.html">Inicie sesión</a>
+            </div>
+            <div class="carrito">
+                <a href="carrito.html">Carrito</a>
+
+            </div>
+        </div>
+      <main>
+<section class="seccion-carrito">
+  <div class="carrito-contenedor">
+    <h2>Tu Carrito</h2>
+
+    <div class="carrito-grid">
+      <div class="item">
+        <img src="Icon/Hamburguesas/hamburguesa1.jpg" alt="Producto 1">
+        <div class="item-info">
+          <h3>Hamburguesa clásica</h3>
+            <p class="precio-unitario">S/ 12.50</p>
+          <input type="number" value="1" class="cantidad">
+        </div>
+        
+        <button class="eliminar">Eliminar</button>
+      </div>
+
+        <div class="item">
+            <img src="Icon/Light/ensalada2.jpg" alt="Producto 2">
+            <div class="item-info">
+            <h3>Ensalada mixta </h3>
+            <p class="precio-unitario">S/ 8.50</p>
+            <input type="number" value="1" class="cantidad">
+            </div>
+            
+            <button class="eliminar">Eliminar</button>
+
+
+    </div>
+        <div class="item">
+            <img src="Icon/Refrescos/refresco3.jpg" alt="Producto 3">
+            <div class="item-info">
+            <h3>Limonada</h3>
+            <p class="precio-unitario">S/ 3.80</p>
+            <input type="number" value="1" class="cantidad">
+            </div>
+            
+            <button class="eliminar">Eliminar</button>
+        </div>
+
+    <div class="resumen">
+      <h3>Subtotal: S/ 18.34</h3>
+      <h3>IGV (18%): S/ 4.46 </h3>
+      <h3>Total: <strong>S/24.80</strong></h3>
+      <button class="btn-comprar">Finalizar Compra</button>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+ <footer>
+        <p>&copy; 2025 Restaurant La Ruta del Sabor. Todos los derechos reservados.</p>
+    </footer>
+
+  <script>
+    // Script básico para actualizar subtotales y total
+    const actualizarTotal = () => {
+      let total = 0;
+      document.querySelectorAll('.carrito-item').forEach(item => {
+        const cantidad = item.querySelector('input').value;
+        const precio = item.querySelector('.precio-unitario').textContent;
+        const subtotal = cantidad * parseFloat(precio);
+        item.querySelector('.subtotal').textContent = subtotal.toFixed(2);
+        total += subtotal;
+      });
+      document.getElementById('total').textContent = total.toFixed(2);
+    };
+
+    document.querySelectorAll('input[type="number"]').forEach(input => {
+      input.addEventListener('change', actualizarTotal);
+    });
+
+    document.querySelectorAll('.eliminar-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.target.closest('.carrito-item').remove();
+        actualizarTotal();
+      });
+    });
+
+    actualizarTotal();
+  </script>
+    </header>

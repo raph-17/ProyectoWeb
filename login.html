@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="style.css" />
+     <script>
+    function validarInicioSesion(event) {
+      event.preventDefault(); // Evita el envío por defecto
+
+      // Obtener valores
+      const usuario = document.getElementById("usuario").value.trim();
+      const contrasena = document.getElementById("contrasena").value.trim();
+
+      if (usuario !== "" && contrasena !== "") {
+        // Redirige si ambos campos están llenos
+        window.location.href = "PWeb.html";
+      } else {
+        alert("Por favor, completa todos los campos.");
+      }
+    }
+
+    // Espera a que cargue todo el DOM
+    window.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("formulario-login").addEventListener("submit", validarInicioSesion);
+    });
+  </script>
+</head>
+<body>
+
+   <div class="login-page">
+    <div class="login-image">
+      <img src="./Icon/Comida.jpeg" alt="Imagen decorativa" />
+    </div>
+
+    <div class="form-container">
+      <h2>Iniciar Sesión</h2>
+      <form id="formulario-login">
+        <label for="usuario"><b>Nombre de Usuario</b><br />
+          <input type="text" id="usuario" placeholder="Nombre de usuario" required />
+        </label><br />
+        <label for="contrasena"><b>Contraseña </b>
+          <input type="password" id="contrasena" placeholder="Contraseña" required />
+        </label>
+        <button type="submit">Iniciar sesión</button>
+      </form>
+      <div class="boton-registro">
+        ¿No tienes una cuenta? <a href="registro.html">Regístrate</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

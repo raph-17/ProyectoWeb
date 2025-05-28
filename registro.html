@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Cuenta</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="registro-cuenta">
+  <div class="form-container">
+    <h2>Crear una Cuenta</h2>
+    <form id="registroForm">
+      <input type="text" placeholder="Nombre" required />
+      <input type="text" placeholder="Apellido" required />
+      <input type="email" placeholder="Correo electrónico" required />
+      <input type="date" placeholder="Fecha de nacimiento" required />
+      <select required>
+        <option value="">Género</option>
+        <option value="masculino">Masculino</option>
+        <option value="femenino">Femenino</option>
+        <option value="otro">Otro</option>
+      </select>
+      <input type="text" placeholder="Nombre de usuario" required />
+      <input type="password" placeholder="Contraseña" required />
+      <input type="text" placeholder="Método de pago (Ej. Tarjeta 1234...)" required />
+      <button type="submit">CREAR UNA CUENTA</button>
+    </form>
+  </div>
+  <script>
+    document.getElementById("registroForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const form = event.target;
+      const inputs = form.querySelectorAll("input, select");
+
+      let allFilled = true;
+
+      inputs.forEach(input => {
+        if (!input.value.trim()) {
+          allFilled = false;
+        }
+      });
+
+      if (allFilled) {
+        // Redirigir al Pweb
+        window.location.href = "PWeb.html";
+      } else {
+        alert("Por favor, completa todos los campos.");
+      }
+    });
+  </script>
+</body>
+</html>
